@@ -1,0 +1,16 @@
+{
+    "name": "maxxd/bowling",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Maxxd\\Bowling\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alex Wharff",
+            "email": "alex@maxxwv.com"
+        }
+    ],
+    "require": {}
+}
