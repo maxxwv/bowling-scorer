@@ -6,6 +6,7 @@ use \Maxxd\Bowling\Controllers\Game;
 
 /**
  * Run `./vendor/phpunit/phpunit/phpunit ./src/tests/GameTest.php --testdox`
+ * Results can be verified here: https://www.bowlinggenius.com/
  */
 class GameTest extends TestCase{
 	public function setUp() : void
