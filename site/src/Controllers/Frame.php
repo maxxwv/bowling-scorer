@@ -27,7 +27,7 @@ class Frame{
 	{
 		array_push($this->score, $pins);
 		$this->setClosedOut(!$this->tenthFrame && $this->roll > 0);
-		if(array_sum($this->score) > 10){
+		if(array_sum($this->score) > 10 && !$this->tenthFrame){
 			throw new Exception('Really, dude?');
 		}
 	}
@@ -47,11 +47,21 @@ class Frame{
 		$this->closedOut = $set;
 	}
 
+	public function setTenthFrame() : void
+	{
+		$this->tenthFrame = true;
+	}
+
+	public function isTenthFrame() : bool
+	{
+		return $this->tenthFrame;
+	}
+
 	public function markStrike() : void
 	{
 		if($this->roll < 1 && array_sum($this->score) == 10){
 			$this->strike = true;
-			$this->setClosedOut(true);
+			$this->setClosedOut(!$this->tenthFrame);
 		}
 	}
 
