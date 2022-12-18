@@ -12,5 +12,8 @@
             "email": "alex@maxxwv.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^9"
+    }
 }
