@@ -157,4 +157,18 @@ class GameTest extends TestCase{
 				->score()
 		);
 	}
+	public function testNotPossible()
+	{
+		try{
+			$this->game
+				->roll(6)
+				->roll(9)
+				->score();
+		}catch(Exception $e){
+			$this->assertEquals(
+				'Really, dude?',
+				$e->getMessage()
+			);
+		}
+	}
 }
